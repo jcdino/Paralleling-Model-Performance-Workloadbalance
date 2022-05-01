@@ -1,1 +1,1 @@
-# OpenMP_scheduling_performance_comparison
+# OpenMP_scheduling_method_comparison

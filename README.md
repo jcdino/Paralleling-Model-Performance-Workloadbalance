@@ -36,6 +36,7 @@
 --> Dynamic Scheduling had the highest overhead followed by Guided and Static. The overhead in Dynamic Scheduling occures because it checks for remaining tasks after ever iteration. Guided Scheduling also has a overhead because it is a type of Dynamic Scheduling, but it starts with large chunks of task which leads to less number of total chunks than Guided Scheduling.
 
 ### Comparing the performance of baseline module, OpenMP, TBB
+(From here, used a different computer enviorment due to small issues on the TBB setup which could have caused some problems)
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/90415099/166252577-28d57fcb-8eaf-4f50-99e2-80818da6eb68.png">
 
 ### Evaluation of the workload balance between threads using TBB

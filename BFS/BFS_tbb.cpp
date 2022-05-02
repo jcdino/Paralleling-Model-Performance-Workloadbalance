@@ -1,5 +1,5 @@
 /*
-gcc -O1 -fopenmp -std=gnu11 BFS_num_threads.c -lrt -lm -o BFS_num_threads
+g++ -O1 -fopenmp -ltbb -std=gnu11 BFS_tbb.cpp -lrt -lm -o BFS_tbb
 
 */
 #include <stdio.h>

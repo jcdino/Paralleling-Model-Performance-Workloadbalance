@@ -38,8 +38,10 @@
 ### Comparing the workload balance with different scheduling methods (Static, Dynamic, Guided) with OpenMP
 #### Static
 <img width="872" alt="image" src="https://user-images.githubusercontent.com/90415099/166261093-f295e56d-0aee-407f-b24a-fb5f8ea2cec9.png">
+
 #### Dynamic
 <img width="872" alt="image" src="https://user-images.githubusercontent.com/90415099/166261107-155423b2-e108-4980-b7be-9a547cf61e31.png">
+
 #### Guided
 <img width="872" alt="image" src="https://user-images.githubusercontent.com/90415099/166261122-cb5743cc-5907-4aa5-82e7-973334257c2f.png">
 --> Dynamic Scheduling had the best workload balance followed by Guided Scheduling and then Static Scheduling.

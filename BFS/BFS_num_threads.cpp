@@ -294,7 +294,6 @@ int main()
         	int* adjugate_matrix  = (int*) malloc(v*v*sizeof(int));
 		for(int k=0; k<v*v; k++) adjugate_matrix[k] = 0;
 	
-
 		printf("\n\nV = %d, E = %d\n", v, e);
 		printf("[Creating Graph]\n...\n");
 
@@ -303,63 +302,18 @@ int main()
 
 		//Initialize all nodes to unvisited
 		for(i = 0; i < v; i++) visited[i] = 0;
-
-		//printf("\n[original] ");
-		//start = omp_get_wtime(); 
-		//t0 = tick_count::now();
-		//basic_BFS(adjugate_matrix, v, visited);
-		//t1 = tick_count::now();
-		//end = omp_get_wtime(); 
-		//printf("BASIC BFS took %g seconds\n", (t1-t0).seconds());
-/*
-		for(int k=1; k<8; k++){
-			printf("\n[OPENMP- %d threads]\n", k);
-
-			//Initialize all nodes to unvisited
-			for(i = 0; i < v; i++) visited[i] = 0;
-
-			//t0 = tick_count::now();
-			//OMP_BFS(adjugate_matrix, v, visited, k);
-			//t1 = tick_count::now();
-			//end = omp_get_wtime(); 
-			//printf("Work took %g seconds\n", (t1-t0).seconds());
-		}
-*/
-		//printf("\n[OPENMP- 8 threads]\n");
-
+		basic_BFS(adjugate_matrix, v, visited);
+		printf("BASIC BFS took %g seconds\n", (t1-t0).seconds());
+		
 		//Initialize all nodes to unvisited
-		//for(i = 0; i < v; i++) visited[i] = 0;
+		for(i = 0; i < v; i++) visited[i] = 0;
+		OMP_BFS(adjugate_matrix, v, visited, 8);
+		printf("OMP BFS took %g seconds\n", (t1-t0).seconds());
 
-		//start = omp_get_wtime(); 
-		//t0 = tick_count::now();
-		//OMP_BFS(adjugate_matrix, v, visited, 8);
-		//t1 = tick_count::now();
-		//end = omp_get_wtime(); 
-		//printf("Work took %g seconds\n", (t1-t0).seconds());
-
-		//Initialize all nodes to unvisited
-		//for(i = 0; i < v; i++) visited[i] = 0;
-
-		//t0 = tick_count::now();
-		//OMP_BFS_static(adjugate_matrix, v, visited, 8);
-		//t1 = tick_count::now();
-		//printf("Work took %g seconds\n", (t1-t0).seconds());
-
-		//Initialize all nodes to unvisited
-		//for(i = 0; i < v; i++) visited[i] = 0;
-
-		//t0 = tick_count::now();
-		//TBB_BFS(adjugate_matrix, v, visited, 8);
-		//t1 = tick_count::now();
-		//printf("Work took %g seconds\n", (t1-t0).seconds());
 
 		//Initialize all nodes to unvisited
 		for(i = 0; i < v; i++) visited[i] = 0;
-
-		//t0 = tick_count::now();
 		TBB_BFS(adjugate_matrix, v, visited, 8);
-		//OMP_BFS_guided(adjugate_matrix, v, visited, 8);
-		//t1 = tick_count::now();
 		printf("TBB BFS took %g seconds\n", (t1-t0).seconds());
 
 		printf("\n");

@@ -1,4 +1,4 @@
-# OpenMP_scheduling_method_comparison
+# Comparing Performance and Workload Balance of paralleling Moduels using BFS
 ## Content
 1. [Problem Description](Problem-Description)
 2. [Parallel Programming Modules](Parallel-Programming-Modules)

@@ -1,8 +1,4 @@
 # Comparing Performance and Workload Balance of Paralleling Models
-## Content
-1. [Problem Description](Problem-Description)
-2. [Parallel Programming Modules](Parallel-Programming-Modules)
-3. [Results](Results)
 
 ## Problem Description
 ### BFS (Breadth First Search)

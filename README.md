@@ -25,8 +25,6 @@
 - Abstracts the low-level thread interface
 
 ## Results
-
-### BFS
 #### Comparing the performance with the increase of number of threads (1 to 8) with OpenMP
 <img width="857" alt="image" src="https://user-images.githubusercontent.com/90415099/166249364-b03274eb-d02c-4c81-98cd-891994ff8092.png">
 

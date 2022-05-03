@@ -1,10 +1,6 @@
 # Comparing Performance and Workload Balance of Paralleling Models
 
-## Problem Description
-### BFS (Breadth First Search)
-
-## Parallel Programming Modules
-
+## Parallel Programming Models
 ### OpenMP
 - Historically used for loop-level and regular parallelism through its compiler directives
 -  From OpenMP 3.0, supports task parallelism
@@ -19,6 +15,11 @@
 - Object C++ runtime library 
 - Contains data structures and algorithms used in parallel programs
 - Abstracts the low-level thread interface
+
+## Problem Description
+### BFS (Breadth First Search)
+Problem Size Setup : increased number of vertices and set the number of edges as a factor of 12 of the number of vertices.</br>
+(reference : Hong, Sungpack & Kim, Sang Kyun & Oguntebi, Tayo & Olukotun, Kunle. (2011). Accelerating CUDA graph algorithms at maximum warp)
 
 ## Results
 ### Comparing the performance with the increase of number of threads (1 to 8) with OpenMP
